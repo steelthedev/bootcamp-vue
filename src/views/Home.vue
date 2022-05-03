@@ -1,15 +1,15 @@
 <template>
 <section class="reg-page">
-    <div class="container-fluid ">
+    <div class="container">
       <div class="form-section">
         <div class="row ">
           <div class=" col-md-6 col-lg-5 img ">
-            <div class="overlay"></div>
+
             <div class="img-s">
-              <img src="../assets/hero_boot.jpeg" alt="" >
+              <img src="../assets/img/oat.jpg" width="100%" alt="" >
             </div>
           </div>
-          <div class="col-md-6 col-lg-7 mt-5">
+          <div class="col-md-6 col-lg-7">
             <div class="form-class">
               <div class="form-heading">
                 <h2>
@@ -47,6 +47,12 @@
                <button class="btn btn-outline-white s-btn" type="submit">Submit Form</button>
             </form>
             
+          <div class="" v-if="errors">
+            <p v-for="e in errors" key="e.id">
+
+            </p>
+          </div>
+
           </div> 
         </div>
       </div>
@@ -56,9 +62,7 @@
 
 
 <script>
-
 import axios from 'axios'
-
 export default {
   name: 'Home',
   components: {
@@ -74,26 +78,21 @@ export default {
       errors:[]
     }
   },
-
   methods:{
     handleSubmit(){
       this.errors= []
       if (this.course == '' ){
         this.errors.push("course cannot be empty")
       }
-
       if (this.full_name == '' ){
         this.errors.push("Name cannot be empty")
       }
-
       if (this.phone_number == '' ){
         this.errors.push("Number cannot be empty")
       }
-
       if (this.email == '' ){
         this.errors.push("Email cannot be empty")
       }
-
       if(!this.errors.length){
         const data = {
           email:this.email,
@@ -119,8 +118,6 @@ export default {
                             console.log(JSON.stringify(error))
                         }
                     })
-
-
       }
     }
   }
@@ -128,24 +125,18 @@ export default {
 </script>
 
 <style scoped>
-
-
-
 .reg-page{
-  padding: 60px;
+  padding: 40px 0;
   position: relative;
   font-family:'Open Sans', sans-serif;
 }
-
-
 .img-s img{
   width: 100%;
   height: 100%;
   
 }
-
 .overlay{
-  background: #fabc37;
+  background: #16283d;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -153,52 +144,49 @@ export default {
   opacity: .2;
 }
 
-.img{
-position: relative;
-height: 100vh;
-}
-
 .form-class{
   margin-top:50px;
 }
-
 .form-heading{
-  color: #fabc37;
+  color: #16283d;
+  font-family: 'PT Sans', sans-serif;
 }
-
 .form-heading h2{
   font-size: 3rem;
+  font-weight: 800;
 }
-
 .form-group{
   padding: 15px;
   
-
 }
-
 .form-group .form-control {
   border-radius: 3px;
   border: none;
   box-shadow: none;
   background: transparent;
-  border-bottom: 2px #FDB51A solid;
+  border-bottom: 2px #16283d solid;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
-
-
 .s-btn{
-  background: #FFAF02;
+  background: #16283d;
   padding: 10px;
-  border-radius: 3px;
+  border-radius: 50px;
   transition:.2s;
   box-shadow: none;
   font-size: 1.2rem;
+  color: #fff;
 }
-
 .s-btn:hover{
-  background: #fabc37;
+  background: #16283d;
   transform: scale(1.1);
 }
 
+
+@media screen and (max-width:768px) {
+  .form-heading h2{
+    font-size: 2rem;
+}
+  
+}
 </style>

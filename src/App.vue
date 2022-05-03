@@ -5,11 +5,9 @@
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;500&family=PT+Sans:ital,wght@0,400;1,700&family=Roboto+Mono:wght@200;300&display=swap');
 
-*{
-  margin: 0;
-  padding: 0;
-}
+
 
 body{
   font-family:'Open Sans', sans-serif;
