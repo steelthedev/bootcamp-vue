@@ -1,4 +1,5 @@
 <template>
+<Navbar />
 <section class="reg-page">
     <div class="container">
       <div class="form-section">
@@ -63,10 +64,11 @@
 
 <script>
 import axios from 'axios'
+import Navbar from '@/components/Navbar.vue'
 export default {
   name: 'Home',
   components: {
-   
+   Navbar
   },
   
   data(){
@@ -149,10 +151,10 @@ export default {
 }
 .form-heading{
   color: #16283d;
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'Michroma', sans-serif;
 }
 .form-heading h2{
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 800;
 }
 .form-group{
@@ -179,13 +181,14 @@ export default {
 }
 .s-btn:hover{
   background: #16283d;
+  color:#fff;
   transform: scale(1.1);
 }
 
 
 @media screen and (max-width:768px) {
   .form-heading h2{
-    font-size: 2rem;
+    font-size: 1.7rem;
 }
   
 }

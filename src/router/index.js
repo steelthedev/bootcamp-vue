@@ -7,7 +7,7 @@ import Reg from '../views/Reg.vue'
 const routes = [
   {
     path: '/',
-    name: 'Home',
+    name: 'home',
     component: Home
   },
 
