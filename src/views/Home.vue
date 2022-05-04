@@ -107,6 +107,7 @@ export default {
           .post('register/course', data )
           .then ( response => {
                 alert("Succesfully registred, check email for next step")
+                window.location.href="//https://paystack.shop/oathub"
           })
           .catch(error => {
                         if (error.response) {
