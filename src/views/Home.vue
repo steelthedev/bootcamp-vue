@@ -38,6 +38,7 @@
                         <option value="">Select course</option>
                         <option value="Graphics">Graphics Design</option>
                         <option value="web">Web Development</option>
+                        <option value="crypto">Crypto Trading</option>
                       </select>
                   </div>
                   
@@ -106,7 +107,7 @@ export default {
         axios
           .post('register/course', data )
           .then ( response => {
-                alert("Succesfully registred, check email for next step")
+                
                 window.location.href="https://paystack.shop/oathub"
           })
           .catch(error => {
