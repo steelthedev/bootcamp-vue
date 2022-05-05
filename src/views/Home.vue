@@ -34,7 +34,7 @@
                   </div>
 
                    <div class="form-group">
-                      <select name="course" class="form-control" v-model="course">
+                      <select name="course" class="form-control mt-3" v-model="course">
                         <option value="">Select course</option>
                         <option value="Graphics">Graphics Design</option>
                         <option value="web">Web Development</option>
@@ -107,7 +107,7 @@ export default {
           .post('register/course', data )
           .then ( response => {
                 alert("Succesfully registred, check email for next step")
-                window.location.href="//https://paystack.shop/oathub"
+                window.location.href="https://paystack.shop/oathub"
           })
           .catch(error => {
                         if (error.response) {
@@ -162,7 +162,7 @@ export default {
   padding: 15px;
   
 }
-.form-group .form-control {
+.form- {
   border-radius: 3px;
   border: none;
   box-shadow: none;
@@ -171,6 +171,14 @@ export default {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
+
+.form-group .form-control{
+    border-radius: 10px;
+    border: 1px solid #16283d;
+    box-shadow: none;
+    padding: 10px;
+}
+
 .s-btn{
   background: #16283d;
   padding: 10px;
@@ -190,6 +198,12 @@ export default {
 @media screen and (max-width:768px) {
   .form-heading h2{
     font-size: 1.7rem;
+}
+}
+
+@media screen and (max-width:450px) {
+  .form-heading h2{
+    font-size: 1.4rem;
 }
   
 }
