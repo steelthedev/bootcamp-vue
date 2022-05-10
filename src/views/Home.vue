@@ -110,8 +110,8 @@ export default {
         axios
           .post('register/course', data )
           .then ( response => {
-                alert("Your data has been saved successfully, you will be redirected shortly")
-                window.location.href="https://paystack.shop/oathub"
+  
+                window.location.href="https://paystack.shop/oathub-bootcamp"
           })
           .catch(error => {
                         if (error.response) {
