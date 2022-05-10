@@ -1,5 +1,5 @@
 <template>
-<Navbar />
+
 <section class="reg-page">
     <div class="container">
       <div class="form-section">
@@ -46,7 +46,7 @@
                 </div>
               
               </div>
-               <button class="btn btn-outline-white s-btn" type="submit">Submit Form</button>
+               <button class="btn btn-outline-white s-btn shadow-none" type="submit">Proceed to Payment</button>
             </form>
             
           <div class="" v-if="errors">
@@ -81,6 +81,9 @@ export default {
       errors:[]
     }
   },
+  mounted(){
+    document.title = "oathub"
+  },
   methods:{
     handleSubmit(){
       this.errors= []
@@ -107,7 +110,7 @@ export default {
         axios
           .post('register/course', data )
           .then ( response => {
-                
+                alert("Your data has been saved successfully, you will be redirected shortly")
                 window.location.href="https://paystack.shop/oathub"
           })
           .catch(error => {
@@ -183,16 +186,17 @@ export default {
 .s-btn{
   background: #16283d;
   padding: 10px;
-  border-radius: 50px;
+  border-radius: 12px;
   transition:.2s;
   box-shadow: none;
   font-size: 1.2rem;
   color: #fff;
+  width: 95%;
 }
 .s-btn:hover{
-  background: #16283d;
+  background: #1B2D41;
   color:#fff;
-  transform: scale(1.1);
+  
 }
 
 
