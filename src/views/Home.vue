@@ -30,17 +30,10 @@
                   </div>
 
                   <div class="form-group">
-                    <input type="email" name="email" placeholder="Input Email" v-model="email" class="  form-control mt-3 ">
+                    <input type="email" name="email" placeholder="Input Email" v-model="email" class="  form-control mt-3 mb-3">
                   </div>
 
-                   <div class="form-group">
-                      <select name="course" class="form-control mt-3" v-model="course">
-                        <option value="">Select course</option>
-                        <option value="Graphics">Graphics Design</option>
-                        <option value="web">Web Development</option>
-                        <option value="crypto">Crypto Trading</option>
-                      </select>
-                  </div>
+                  
                   
                
                 </div>
@@ -74,7 +67,7 @@ export default {
   
   data(){
     return{
-      course:'',
+     
       full_name:'',
       email:'',
       phone_number:'',
@@ -87,9 +80,7 @@ export default {
   methods:{
     handleSubmit(){
       this.errors= []
-      if (this.course == '' ){
-        this.errors.push("course cannot be empty")
-      }
+      
       if (this.full_name == '' ){
         this.errors.push("Name cannot be empty")
       }
